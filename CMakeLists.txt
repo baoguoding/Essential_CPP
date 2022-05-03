@@ -1,0 +1,63 @@
+cmake_minimum_required(VERSION 3.22)
+project(Essential_CPP)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(chapt4/4_01)
+include_directories(chapt4/4_02)
+include_directories(chapt4/4_03)
+include_directories(chapt4/4_04)
+include_directories(chapt5/5_01)
+include_directories(chapt5/5_02)
+include_directories(chapt5/5_03)
+include_directories(chapt5/5_04)
+
+add_executable(Essential_CPP
+        chapt1/1_01.cpp
+        chapt1/1_02.cpp
+        chapt1/1_03.cpp
+        chapt1/1_04.cpp
+        chapt1/1_05.cpp
+        chapt1/1_06.cpp
+        chapt1/1_07.cpp
+        chapt1/1_08.cpp
+        chapt1/exe1.6.cpp
+        chapt1/exe1.7.cpp
+        chapt2/2_01.cpp
+        chapt2/2_02.cpp
+        chapt2/2_03.cpp
+        chapt2/2_04.cpp
+        chapt2/2_05.cpp
+        chapt2/2_06.cpp
+        chapt2/2_07.cpp
+        chapt2/2_08.cpp
+        chapt2/2_09.cpp
+        chapt3/3_01.cpp
+        chapt3/3_02.cpp
+        chapt3/3_03.cpp
+        chapt3/3_04.cpp
+        chapt3/3_05.cpp
+        chapt3/3_06.cpp
+        chapt3/3_07.cpp
+        chapt3/3_08.cpp
+        chapt4/4_01/main.cpp
+        chapt4/4_01/Stack.cpp
+        chapt4/4_01/Stack.hpp
+        chapt4/4_02/main.cpp
+        chapt4/4_02/Triangular.hpp
+        chapt4/4_03/main.cpp
+        chapt4/4_03/Matrix.hpp
+        chapt4/4_04/LessThan.hpp
+        chapt4/4_04/main.cpp
+        chapt5/5_01/LibMat.hpp
+        chapt5/5_01/main.cpp
+        chapt5/5_02/fibonacci.hpp
+        chapt5/5_02/main.cpp
+        chapt5/5_02/num_sequence.hpp
+        chapt5/5_03/fibonacci.hpp
+        chapt5/5_03/main.cpp
+        chapt5/5_03/num_sequence.hpp
+        chapt5/5_04/fibonacci.hpp
+        chapt5/5_04/main.cpp
+        chapt5/5_04/num_sequence.hpp
+        chapt6/6_01.cpp)

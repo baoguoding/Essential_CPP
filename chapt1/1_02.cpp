@@ -45,22 +45,22 @@ int main(void)
                     << elem_seq[cur_index] << ", " << elem_seq[cur_index+1] << endl;
         std::cout << "What is the next element?";
         int tries_cnt = 0;
-        next_seq = true;
-        go_for_it = true;
-        got_it = false;
-        // 用户所猜不正确 && 用户想要再猜一次
+        next_seq = true;            // 显示下一组数列
+        go_for_it = true;           // 用户想继续猜一次
+        got_it = false;             //默认用户猜错
+        // 用户所猜不正确 && 用户想要再猜一次 && 是否超过最大尝试次数
         while(!got_it && go_for_it && (++tries_cnt <= max_tries))
         {
             std::cin >> user_guess;
-            ++num_tries;
+            ++num_tries;            // 总的猜测数
             //  如果答案正确
             if(user_guess == elem_seq[cur_index+2])
             {
-                ++num_right;
+                ++num_right;        // 总的正确数
                 std::cout << "Very good, yes, " << elem_seq[cur_index+2]
                             << " is the next element in the "
                             << seq_names[cur_index/3] << "  sequence." << endl;
-                got_it = true;
+                got_it = true;      // 用户是否猜对
             }else{
             // 如果答案错误
                 switch (tries_cnt)
