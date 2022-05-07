@@ -40,17 +40,19 @@ int main(void)
     // 用户想要继续猜某个数列
     while (next_seq == true && cur_index < seq_size)
     {
-        // 显示数列的前两个数字
-        std::cout << "The first 2 elements of the sequence are: "
-                    << elem_seq[cur_index] << ", " << elem_seq[cur_index+1] << endl;
-        std::cout << "What is the next element?";
-        int tries_cnt = 0;
+        int tries_cnt = 0;          // 尝试次数
         next_seq = true;            // 显示下一组数列
         go_for_it = true;           // 用户想继续猜一次
-        got_it = false;             //默认用户猜错
+        got_it = false;             // 默认用户猜错
+
+        // 显示数列的前两个数字
+        std::cout << "The first 2 elements of the sequence are: "
+                  << elem_seq[cur_index] << ", " << elem_seq[cur_index+1] << endl;
+
         // 用户所猜不正确 && 用户想要再猜一次 && 是否超过最大尝试次数
         while(!got_it && go_for_it && (++tries_cnt <= max_tries))
         {
+            std::cout << "What is the next element? ";
             std::cin >> user_guess;
             ++num_tries;            // 总的猜测数
             //  如果答案正确

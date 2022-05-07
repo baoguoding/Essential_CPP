@@ -88,7 +88,8 @@ int main(void)
     while (next_seq == true)
     {
         seq_index = rand() % max_seq;
-        current_vec = seq_addrs[seq_index];
+//        current_vec = seq_addrs[seq_index];
+        current_vec = *(seq_addrs+seq_index);
         std::cout << "The first 2 elements of the sequence are: "
                     << (*current_vec)[0] << ", " <<  (*current_vec)[1] << endl;
         std::cout << "What is the next element?";
