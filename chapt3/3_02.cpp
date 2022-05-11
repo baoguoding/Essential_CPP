@@ -4,8 +4,8 @@
 #include <string>
 using namespace std;
 
-template<typename ItType, typename elemType>
-ItType find(ItType first, ItType last, const elemType & value)
+template<typename T, typename elemType>
+T find1(T first, T last, const elemType & value)
 {
     for(; first != last; ++first)
     {
@@ -21,7 +21,7 @@ int main()
     vector<int> ivec(array, array + 8);
     list<int> ilist(array, array + 8);
 
-    int * p = find(array, array + 8, 5);
+    int * p = find1(array, array + 8, 5);
     if(p != array + 8)
     {
         // 找到了
@@ -30,14 +30,14 @@ int main()
         cout << "Not find" << endl;
 
     vector<int>::iterator iter;
-    iter = find(ivec.begin(), ivec.end(), 5);
+    iter = find1(ivec.begin(), ivec.end(), 5);
     if(iter != ivec.end())
         cout << "Find" << endl;
     else
         cout << "Not find" << endl;
 
     list<int>::iterator it_list;
-    it_list = find(ilist.begin(), ilist.end(), 8);
+    it_list = find1(ilist.begin(), ilist.end(), 8);
     if(it_list != ilist.end())
         cout << "Find" << endl;
     else
