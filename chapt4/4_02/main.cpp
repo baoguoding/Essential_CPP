@@ -9,7 +9,10 @@ int main()
 
     cout << tri1 << ", sum = " << sum(tri1) << endl;
     cin >> tri2;
-    
+
+//    tri2.copy(tri1);
+//    tri2 = tri1;
+
     cout << tri2 << ", sum = " << sum(tri2) << endl;
     return 0;
 }

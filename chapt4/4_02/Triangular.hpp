@@ -34,6 +34,7 @@ public:
     bool next(int &val) const;
     void next_reset() const { _next = _beg_pos - 1; }
     Triangular &copy(const Triangular &rhs);
+    Triangular operator=(const Triangular &rhs);
 
     static bool is_elem(int value);
     static void gen_elements(int length);
@@ -134,6 +135,16 @@ bool Triangular::next(int &val) const
 
 Triangular &Triangular::copy(const Triangular &rhs)
 {
+    if (this != &rhs)
+    {
+        _length = rhs._length;
+        _beg_pos = rhs._beg_pos;
+        _next = rhs._beg_pos - 1;
+    }
+    return *this;
+}
+
+Triangular Triangular::operator=(const Triangular &rhs){
     if (this != &rhs)
     {
         _length = rhs._length;
