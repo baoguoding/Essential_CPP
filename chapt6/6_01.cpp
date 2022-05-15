@@ -13,7 +13,7 @@ public:
         _os << elem << delimiter;
     }
 private:
-    ostream & _os;
+    OS & _os;
 };
 
 
